@@ -1,0 +1,20 @@
+:root {
+	--header-text-color: #212121;
+	--address-text-color: #757575;
+	--hover-link-color: #2196f3;
+	--hero-footer-color: #2f303a;
+	--first-title-color: #ffffff;
+	--hero-btn-color: #ffffff;
+	--benefits-text-color: #757575;
+	--team-background-color: #f5f4fa;
+	--hero-btn-hover: #188ce8;
+	--examples-boarder-color: #eeeeee;
+	--icon-static-color: #afb1b8;
+}
+
+@mixin text($fz, $fw, $lh, $ls) {
+	font-size: $fz;
+	font-weight: $fw;
+	line-height: $lh;
+	letter-spacing: $ls;
+}

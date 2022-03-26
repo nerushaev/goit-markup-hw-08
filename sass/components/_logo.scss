@@ -1,0 +1,14 @@
+.logo {
+	font-family: Raleway;
+	@include text(26px, 700, 1.2, 0.03em);
+	color: var(--hover-link-color);
+	display: inline-block;
+}
+
+.logo__dark {
+	color: var(--header-text-color);
+}
+
+.logo__white {
+	color: var(--first-title-color);
+}

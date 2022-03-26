@@ -1,0 +1,36 @@
+.work-list {
+	display: flex;
+}
+
+.work-list__item + .work-list__item {
+	margin-left: 30px;
+}
+
+.section-title {
+	@include text(36px, 700, 0.6, 0.03em);
+	color: var(--header-text-color);
+	justify-content: center;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.work-list__window {
+	position: relative;
+	overflow: hidden;
+}
+
+.work-list__text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include text(14px, 700, 1.1, 0.03em);
+	text-transform: uppercase;
+	color: var(--first-title-color);
+	background-color: rgba(47, 48, 58, 0.8);
+	width: 100%;
+	height: 70px;
+
+	position: absolute;
+	bottom: 0;
+}
