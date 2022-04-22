@@ -1,0 +1,15 @@
+.mobile-btn {
+	width: 40px;
+	height: 40px;
+	margin-left: auto;
+	position: relative;
+	z-index: 90;
+
+	&__menu {
+		opacity: 1;
+	}
+
+	&__close {
+		opacity: 0;
+	}
+}
