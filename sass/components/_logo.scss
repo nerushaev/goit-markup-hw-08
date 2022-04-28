@@ -1,8 +1,16 @@
 .logo {
 	font-family: Raleway;
-	@include text(26px, 700, 1.2, 0.03em);
+	@include text(24px, 700, 1.2, 0.03em);
 	color: var(--hover-link-color);
 	display: inline-block;
+
+	@include mq(tablet) {
+		margin-right: 88px;
+	}
+
+	@include mq(desktop) {
+		margin-right: 93px;
+	}
 }
 
 .logo__dark {
