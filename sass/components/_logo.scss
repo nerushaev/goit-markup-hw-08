@@ -4,19 +4,15 @@
 	color: var(--hover-link-color);
 	display: inline-block;
 
-	@include mq(tablet) {
-		margin-right: 88px;
-	}
-
 	@include mq(desktop) {
-		margin-right: 93px;
+		font-size: 26px;
 	}
-}
 
-.logo__dark {
-	color: var(--header-text-color);
-}
+	&__dark {
+		color: var(--header-text-color);
+	}
 
-.logo__white {
-	color: var(--first-title-color);
+	&__white {
+		color: var(--first-title-color);
+	}
 }
