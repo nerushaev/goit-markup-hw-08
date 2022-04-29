@@ -4,19 +4,43 @@
 	padding-bottom: 60px;
 }
 
-.address-list__item:not(:last-child) {
-	margin-bottom: 9px;
+.footer__container {
+	text-align: center;
+
+	@include mq(tablet) {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	@include mq(desktop) {
+		text-align: start;
+	}
 }
 
-.footer-logo {
+.footer__contacts {
+	@media screen and (max-width: 1199px) {
+		justify-content: center;
+	}
+
+	@include mq(desktop) {
+		margin-right: 70px;
+		flex-grow: 1;
+	}
+}
+
+.footer__logo {
 	margin-bottom: 20px;
 }
 
-.footer-address {
-	font-style: normal;
+.address__item {
+	&:not(:last-child) {
+		margin-top: 7px;
+	}
 }
 
-.address-list__address {
+.address__map-link {
 	@include text(14px, null, 1.71, 0.03em);
 	color: var(--first-title-color);
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -26,7 +50,7 @@
 	}
 }
 
-.address-list__mail {
+.address__mail-link {
 	@include text(14px, 500, 1.1, 0.02em);
 	color: var(--address-text-color);
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -36,7 +60,7 @@
 	}
 }
 
-.address-list__tel {
+.address__tel-link {
 	@include text(14px, 500, 1.1, 0.02em);
 	color: var(--address-text-color);
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -46,32 +70,39 @@
 	}
 }
 
-.connect-container {
-	margin-right: 70px;
-	flex-grow: 1;
+.footer-socials {
+	display: flex;
+	flex-direction: column;
+
+	@include mq(mobile-only) {
+		margin-top: 60px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		justify-content: center;
+	}
+
+	@include mq(desktop) {
+		justify-content: left;
+		margin-right: 93px;
+	}
 }
 
-.footer-icon-title {
+.footer-socials__title {
 	@include text(14px, 700, 1.1, 0.03em);
 	text-transform: uppercase;
 	color: var(--first-title-color);
-	margin-bottom: 17px;
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 
-.footer-container {
-	align-items: baseline;
+.socials {
 	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
 }
 
-.footer-icon-list {
-	display: flex;
-}
-
-.footer-icon-container {
-	margin-right: 93px;
-}
-
-.footer-icon-list__item {
+.socials__item {
 	width: 44px;
 	height: 44px;
 	&:not(:last-child) {
@@ -79,13 +110,12 @@
 	}
 }
 
-.footer-icon-list__link {
+.socials__link {
 	width: 44px;
 	height: 44px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
 	color: var(--first-title-color);
@@ -96,11 +126,21 @@
 	}
 }
 
-.footer-icon {
+.socials__icon {
 	fill: currentColor;
 }
 
-.footer-subscribe-title {
+.subscription {
+	@media screen and (max-width: 1199px) {
+		margin-top: 60px;
+	}
+
+	@include mq(desktop) {
+		max-width: 570px;
+	}
+}
+
+.subscription__title {
 	@include text(14px, 700, 1.1, 0.03em);
 	text-transform: uppercase;
 
@@ -108,37 +148,66 @@
 	margin-bottom: 20px;
 }
 
-.footer-form__input {
+.subscription__form {
+	margin-top: 20px;
+
+	@include mq(desktop) {
+		display: flex;
+	}
+}
+
+.subscription__input {
+	height: 50px;
+	width: 100%;
+	padding-left: 16px;
+	margin-bottom: 20px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
-	height: 50px;
-	width: 358px;
-	margin-right: 12px;
-	padding-left: 16px;
 	background-color: transparent;
-	outline: none;
+	align-items: center;
+
+	@media screen and (max-width: 1199px) {
+		max-width: 450px;
+	}
+
+	@include mq(mobile) {
+		width: 450px;
+	}
+
+	@include mq(desktop) {
+		max-width: 100%;
+		align-items: center;
+	}
+
+	&::placeholder {
+		color: rgba(255, 255, 255, 0.6);
+	}
 }
 
-.footer-form {
-	display: flex;
-	justify-content: center;
-}
-
-.footer-form__btn {
+.subscription__btn {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
 	@include text(16px, 700, 1.87, 0.06em);
 	color: #ffffff;
-
 	background: var(--hover-link-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
-	width: 200px;
+	min-width: 200px;
 	height: 50px;
+	border: none;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	@include mq(desktop) {
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 12px;
+	}
 
 	&:hover,
 	&:focus {
@@ -147,6 +216,6 @@
 	}
 }
 
-.footer-form__icon {
+.subscription__icon {
 	margin-left: 10px;
 }

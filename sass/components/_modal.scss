@@ -5,12 +5,13 @@
 	background-color: rgba(0, 0, 0, 0.2);
 	top: 0;
 	transition: opacity 500ms, visibility 500ms;
+	z-index: 99;
 }
 
 .modal {
 	position: absolute;
-	width: 528px;
-	min-height: 581px;
+	width: 450px;
+	min-height: 609px;
 	background-color: #ffffff;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -21,6 +22,11 @@
 	padding: 40px;
 	.backdrop.is-hidden & {
 		transform: rotate(-300deg) scale(0.3);
+	}
+
+	@include mq(desktop) {
+		width: 528px;
+		height: 581px;
 	}
 }
 
@@ -50,7 +56,7 @@
 }
 
 .modal-title {
-	@include text(20px, 500, 1.2, 0.03em);
+	@include text(20px, 700, 1.2, 0.03em);
 	text-align: center;
 	color: var(--header-text-color);
 	margin-bottom: 12px;
@@ -96,10 +102,6 @@
 
 .checkbox-input {
 	margin-right: 8px;
-}
-
-.checkbox-label {
-	@include text(14px, null, 1.71, 0.03em);
 }
 
 .modal-label {
@@ -148,7 +150,7 @@
 }
 
 .checkbox-label {
-	@include text(14px, null, 1.71, 0.03em);
+	@include text(12px, null, 1.2, 0.03em);
 	color: var(--address-text-color);
 	display: flex;
 	align-items: center;
@@ -166,4 +168,10 @@
 .checkbox-input:checked + .checkbox-label::before {
 	background-image: url(../images/check.svg);
 	border: none;
+}
+
+.chekbox-label__link {
+	color: var(--hover-link-color);
+	margin-left: 5px;
+	text-decoration: underline;
 }

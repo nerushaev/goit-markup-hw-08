@@ -1,14 +1,18 @@
 .logo {
 	font-family: Raleway;
-	@include text(26px, 700, 1.2, 0.03em);
+	@include text(24px, 700, 1.2, 0.03em);
 	color: var(--hover-link-color);
 	display: inline-block;
-}
 
-.logo__dark {
-	color: var(--header-text-color);
-}
+	@include mq(desktop) {
+		font-size: 26px;
+	}
 
-.logo__white {
-	color: var(--first-title-color);
+	&__dark {
+		color: var(--header-text-color);
+	}
+
+	&__white {
+		color: var(--first-title-color);
+	}
 }

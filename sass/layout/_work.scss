@@ -1,5 +1,14 @@
 .work-list {
 	display: flex;
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+}
+
+.work-title {
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
 }
 
 .work-list__item + .work-list__item {
