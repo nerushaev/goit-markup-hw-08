@@ -10,6 +10,7 @@
   --hero-btn-hover: #188ce8;
   --examples-boarder-color: #eeeeee;
   --icon-static-color: #afb1b8;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
 }
 
 h1,
@@ -96,27 +97,26 @@ body {
   padding-top: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .section--no-padding-top {
-    padding-bottom: 0;
-  }
-}
-
 .section--other-background {
   background-color: var(--team-background-color);
 }
 
 .section__title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
   font-weight: bold;
   font-size: 28px;
   line-height: calc(33 / 28);
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
 }
 
 .visually-hidden {
@@ -158,6 +158,14 @@ body {
 
 .backdrop.is-hidden .modal {
   transform: rotate(-300deg) scale(0.3);
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .modal {
+    width: 300px;
+    min-height: 480px;
+    padding: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -202,6 +210,15 @@ body {
   margin-bottom: 12px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .modal-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+}
+
 .modal-input {
   width: 100%;
   height: 40px;
@@ -235,6 +252,12 @@ body {
 
 .modal-form .modal-text {
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .modal-text {
+    height: 80px;
+  }
 }
 
 .checkbox {
@@ -280,6 +303,12 @@ body {
   background: var(--hero-btn-hover);
 }
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .modal-button {
+    font-size: 14px;
+  }
+}
+
 .modal-icon-container {
   position: relative;
   margin-bottom: 10px;
@@ -314,6 +343,12 @@ body {
   border-radius: 2px;
   display: block;
   margin-right: 5px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .checkbox-label {
+    font-size: 10px;
+  }
 }
 
 .checkbox-input:checked + .checkbox-label::before {
@@ -538,6 +573,12 @@ body {
   margin-bottom: 306px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .mobile-nav {
+    margin-bottom: 80px;
+  }
+}
+
 .mobile-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -552,7 +593,6 @@ body {
 
 .mobile-socials__list {
   display: flex;
-  justify-content: space-between;
 }
 
 .mobile-socials__item:not(:last-child) {
@@ -569,7 +609,7 @@ body {
   height: 100%;
   background-color: rgba(33, 33, 33, 0.2);
   position: absolute;
-  right: -10px;
+  right: -5px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -642,6 +682,10 @@ body {
   .page-nav__link--current::after {
     bottom: -33px;
   }
+}
+
+.page-nav__link--current {
+  color: var(--hover-link-color);
 }
 
 @media screen and (min-width: 1200px) {
@@ -855,8 +899,13 @@ body {
   text-transform: uppercase;
   color: var(--header-text-color);
   margin-bottom: 10px;
-  text-align: center;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .benefits__title {
+    text-align: center;
+  }
 }
 
 .benefits__text {
@@ -1122,8 +1171,9 @@ body {
   margin-bottom: 20px;
 }
 
-.address__item:not(:last-child) {
+.address__item {
   margin-top: 7px;
+  font-style: normal;
 }
 
 .address__map-link {
@@ -1140,10 +1190,10 @@ body {
 
 .address__mail-link {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: var(--address-text-color);
+  color: var(--footer-text-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1153,10 +1203,10 @@ body {
 
 .address__tel-link {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: var(--address-text-color);
+  color: var(--footer-text-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1401,7 +1451,7 @@ body {
 .examples-list__item {
   display: flex;
   margin-bottom: 30px;
-  background-color: var(--team-background-color);
+  background-color: var(--hero-btn-color);
 }
 
 @media screen and (min-width: 768px) {

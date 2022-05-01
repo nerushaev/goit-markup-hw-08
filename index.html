@@ -38,7 +38,7 @@
           <nav class="mobile-nav">
           <ul class="mobile-nav__list">
             <li class="mobile-nav__item">
-              <a target="_self" href="" class="mobile-nav__link mobile-nav__link--current">Студия</a>
+              <a target="_self" href="./index.html" class="mobile-nav__link mobile-nav__link--current">Студия</a>
             </li>
             <li class="mobile-nav__item">
               <a target="_self" href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
@@ -51,7 +51,7 @@
         <div class="mobile-contacts">
         <ul class="mobile-contacts__list">
           <li class="mobile-contacts__item">
-            <a class="mobile-contacts__link mobile-contacts__link--tel" href="tel:+38 096 111 11 11">+38 096 111 11 11</a>
+            <a class="mobile-contacts__link mobile-contacts__link--tel" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
           <li class="mobile-contacts__item">
             <a class="mobile-contacts__link mobile-contacts__link--mail" href="mail:info@devstudio.com">info@devstudio.com</a>
@@ -171,19 +171,37 @@
         <ul class="work-list">
           <li class="work-list__item">
             <div class="work-list__window">
-            <img class="work-list__img" src="./images/img.jpg" alt="Человек пишет код" width="370" height="294">
+            <picture>
+            <source 
+            media="(min-width: 1200px)" 
+            srcset="./images/box-1.jpg 1x,
+                    ./images/box-1@2.jpg 2x">
+            <img class="work-list__img" src="./images/box-1.jpg" alt="Человек пишет код" width="370" height="294">
+            </picture>
             <p class="work-list__text">Десктопные приложения</p>
             </div>
           </li>
           <li class="work-list__item">
             <div class="work-list__window">
-            <img class="work-list__img" src="./images/box-2.jpg" alt="Человек смотрит на макет" width="370" height="294">
+            <picture>
+              <source 
+              media="(min-width: 1200px)" 
+              srcset="./images/box-2.jpg 1x,
+                      ./images/box-2@2.jpg 2x">
+              <img class="work-list__img" src="./images/box-2.jpg" alt="Человек пишет код" width="370" height="294">
+            </picture>
             <p class="work-list__text">Мобильные приложения</p>
             </div>
           </li>
           <li class="work-list__item">
             <div class="work-list__window">
-            <img class="work-list__img" src="./images/box-3.jpg" alt="Человек смотрит на RGB-палитру" width="370" height="294">
+            <picture>
+              <source 
+              media="(min-width: 1200px)" 
+              srcset="./images/box-3.jpg 1x,
+                      ./images/box-3@2.jpg 2x">
+              <img class="work-list__img" src="./images/box-3.jpg" alt="Человек пишет код" width="370" height="294">
+            </picture>
             <p class="work-list__text">Дизайнерские решения</p>
             </div>
           </li>
@@ -560,8 +578,7 @@
           </svg>
           </div>
           <label class="modal-label" for="user-comment">Комментарий</label>
-        <textarea
-          type="text" 
+        <textarea  
           name="user-comment" 
           class="modal-input modal-text"
           id="user-comment"

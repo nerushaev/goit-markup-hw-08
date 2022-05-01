@@ -15,7 +15,7 @@
 .examples-list__item {
 	display: flex;
 	margin-bottom: 30px;
-	background-color: var(--team-background-color);
+	background-color: var(--hero-btn-color);
 	@include mq(tablet) {
 		margin-left: 15px;
 		margin-right: 15px;
