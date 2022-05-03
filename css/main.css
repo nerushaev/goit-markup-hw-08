@@ -1501,6 +1501,12 @@ body {
   border-top: 0;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .examples-list__text {
+    flex-grow: 1;
+  }
+}
+
 .examples-list__sup-title {
   font-size: 18px;
   font-weight: 700;
@@ -1516,12 +1522,6 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--address-text-color);
-}
-
-@media screen and (min-width: 768px) {
-  .examples-list__sub-title--margin {
-    margin-bottom: 36px;
-  }
 }
 
 .examples-overlay {

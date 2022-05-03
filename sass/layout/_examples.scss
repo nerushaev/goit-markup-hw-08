@@ -54,6 +54,9 @@
 	padding: 20px 24px;
 	border: 1px solid var(--examples-boarder-color);
 	border-top: 0;
+	@include mq(tablet-only) {
+		flex-grow: 1;
+	}
 }
 
 .examples-list__sup-title {
@@ -66,12 +69,6 @@
 .examples-list__sub-title {
 	@include text(16px, null, 1.87, 0.03em);
 	color: var(--address-text-color);
-}
-
-.examples-list__sub-title--margin {
-	@include mq(tablet) {
-		margin-bottom: 36px;
-	}
 }
 
 .examples-overlay {
