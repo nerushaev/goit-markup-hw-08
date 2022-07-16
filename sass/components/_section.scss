@@ -22,7 +22,6 @@
 	text-align: center;
 	letter-spacing: 0.03em;
 	margin-bottom: 30px;
-
 	@include mq(desktop) {
 		@include text(36px, 700, 1.2, 0.03em);
 	}

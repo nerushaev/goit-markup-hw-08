@@ -5,6 +5,13 @@
 	margin-left: -15px;
 	margin-right: -15px;
 	margin-bottom: -30px;
+	background-image: repeating-linear-gradient(
+		to left,
+		blue,
+		blue 20px,
+		red 20px,
+		red 40px /* Опеределяет размер градиента */
+	);
 }
 
 .clients-list__item {
